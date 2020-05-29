@@ -7,9 +7,8 @@
     <groupId>io.github.careem</groupId>
     <artifactId>converter-codegen</artifactId>
     <packaging>pom</packaging>
-    <version>0.6.18-SNAPSHOT</version>
+    <version>0.6.19-SNAPSHOT</version>
     <modules>
-        <module>converter-annotation-processor</module>
     </modules>
 
     <properties>
@@ -157,6 +156,17 @@
             <modules>
                 <module>converter-annotation-processor</module>
                 <module>test-app</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>deploy</id>
+            <activation>
+                <property>
+                    <name>deploy</name>
+                </property>
+            </activation>
+            <modules>
+                <module>converter-annotation-processor</module>
             </modules>
         </profile>
     </profiles>
