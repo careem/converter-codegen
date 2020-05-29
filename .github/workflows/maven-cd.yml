@@ -1,0 +1,44 @@
+# This workflow will deploy a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+# https://github.com/marketplace/actions/action-maven-publish
+
+name: Java CD with Maven
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Release Maven package
+      uses: samuelmeuli/action-maven-publish@v1
+      with:
+        gpg_private_key: ${{ secrets.gpg_private_key }}
+        gpg_passphrase: ${{ secrets.gpg_passphrase }}
+        nexus_username: ${{ secrets.nexus_username }}
+        nexus_password: ${{ secrets.nexus_password }}
+#     - name: Set up Java for publishing to Maven Central Repository
+#       uses: actions/setup-java@v1
+#       with:
+#         java-version: 1.8
+#         server-id: ossrh
+#         server-username: MAVEN_USERNAME
+#         server-password: MAVEN_PASSWORD
+#     - name: Publish to the Maven Central Repository
+#       run: mvn -B deploy
+#       env:
+#         MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#         MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+#     - name: Set up Java for publishing to GitHub Packages
+#       uses: actions/setup-java@v1
+#       with:
+#         java-version: 1.8
+#     - name: Publish to GitHub Packages
+#       run: mvn -B deploy
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
