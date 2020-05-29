@@ -6,7 +6,7 @@ Generates converters through annotation processing
 ---
 
 ### How to use
-##### Converter code generation:
+#### Converter code generation:
 Maven dependency:
 ```xml
 <dependency>
