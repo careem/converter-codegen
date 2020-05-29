@@ -1,0 +1,22 @@
+package {{PACKAGE}};
+
+import lombok.NonNull;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
+{{ADDITIONAL_IMPORTS}}
+
+@Component
+public class {{FROM_CLASS}}To{{TO_CLASS}}Converter implements Converter<{{FROM_CLASS}}, {{INTERFACE_TO_CLASS}}> {
+    {{ADDITIONAL_VARS}}
+    public {{FROM_CLASS}}To{{TO_CLASS}}Converter({{CONSTRUCTOR_PARAMS}}) {
+        {{CONSTRUCTOR_CODE}}
+    }
+
+    {{NON_NULL}}
+    @Override
+    public {{INTERFACE_TO_CLASS}} convert({{NON_NULL}} {{FROM_CLASS}} from) {
+        {{NULL_CHECK_CODE}}
+        return {{TO_CLASS}}.builder(){{BUILD_PROPS}}
+            .build();
+    }
+}
