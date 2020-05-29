@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Maven test
+      run: mvn clean test
+
     - uses: actions/checkout@v2
     - name: Release Maven package
       uses: samuelmeuli/action-maven-publish@v1
