@@ -81,7 +81,7 @@ public class ClassAToClassBConverter implements Converter<ClassA, ClassB> {
 
     @NonNull
     @Override
-    public ClassB convert(@NonNull ClassA from) {
+    public ClassB convert( ClassA from) {
         return ClassB.builder()
             .field1(from.getField1())
             .field3(String.valueOf(from.getField3()))
@@ -154,7 +154,7 @@ public class ClassAToClassBConverter implements Converter<ClassA, ClassB> {
 
     @NonNull
     @Override
-    public ClassB convert(@NonNull ClassA from) {
+    public ClassB convert( ClassA from) {
         return ClassB.builder()
             .field1(from.getField1())
             .field3(String.valueOf(from.getField3()))
