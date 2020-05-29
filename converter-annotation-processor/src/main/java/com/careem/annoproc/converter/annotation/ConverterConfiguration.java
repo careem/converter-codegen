@@ -16,9 +16,9 @@ import java.lang.annotation.Target;
  * and a ClassB which has field jobType of type Integer.
  * For mapping ClassA::jobType to ClassB::jobType, we want to preconfigure the mapping,
  * so we can directly configure mapping on interface level as follows:
- * @ConverterConfiguration(
+ * \@ConverterConfiguration(
  *     mappings = {
- *         @ConverterConfiguration.Mapping(
+ *         \@ConverterConfiguration.Mapping(
  *             from = IntegerEnumType.class,
  *             to = Integer.class,
  *             suffix = ".getCode()"
@@ -32,7 +32,7 @@ public @interface ConverterConfiguration {
 
     /**
      * packages to be scanned to find existing converters
-     * @return
+     * @return String[]
      */
     String[] packages() default {};
 

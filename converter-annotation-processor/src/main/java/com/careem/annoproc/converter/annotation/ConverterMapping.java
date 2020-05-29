@@ -17,7 +17,7 @@ import java.lang.annotation.Target;
  * So, for converting Author to Person,
  * we need to map authorName of Author to name field of Person.
  * This can be done by adding the annotation on the field as follows
- *     @ConverterMapping(sourceClass = Author.class, field = "authorName")
+ *     \@ConverterMapping(sourceClass = Author.class, field = "authorName")
  *     private String name;
  */
 @Retention(RetentionPolicy.SOURCE)
@@ -32,33 +32,33 @@ public @interface ConverterMapping {
 
     /**
      * If value is not empty then use the value as-it-is as expression
-     * @return
+     * @return String
      */
     String value() default "";
 
     /**
      * If value is empty, but field is not empty then use field name
      * for generating {@link ConversionMappingResult} expression
-     * @return
+     * @return String
      */
     String field() default "";
 
     /**
      * If value and field are empty, but method is not empty then use method
      * for generating {@link ConversionMappingResult} expression
-     * @return
+     * @return String
      */
     String method() default "";
 
     /**
      * Use check for null before converting and/or setting value of the target field
-     * @return
+     * @return boolean
      */
     boolean nullCheck() default false;
 
     /**
      * If skip is true, then field is mapping is not added in the converter
-     * @return
+     * @return boolean
      */
     boolean skip() default false;
 }
