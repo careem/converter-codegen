@@ -22,3 +22,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@v1.2
+      with:
+        projectBaseDir: .
