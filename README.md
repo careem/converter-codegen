@@ -5,7 +5,7 @@ Generates converters through annotation processing
 
 ---
 
-#### How to use
+### How to use
 ##### Converter code generation:
 Maven dependency:
 ```xml
