@@ -7,7 +7,7 @@
     <groupId>io.github.careem</groupId>
     <artifactId>converter-codegen</artifactId>
     <packaging>pom</packaging>
-    <version>0.6.19-SNAPSHOT</version>
+    <version>0.6.20</version>
     <modules>
     </modules>
 
