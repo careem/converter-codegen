@@ -155,7 +155,7 @@
             </activation>
             <modules>
                 <module>converter-annotation-processor</module>
-                <module>test-app</module>
+                <module>converter-codegen-testapp</module>
             </modules>
         </profile>
         <profile>
