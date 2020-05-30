@@ -27,9 +27,10 @@ If you are interested in snapshots as well, add following repository to `pom.xml
   <version>${converter-codegen-version}</version>
 </dependency>
 ```
-- That's it, you are ready to use it
+That's it, you are ready to use it
 
-## Examples
+## How to use?
+Let's go through examples:
 ### Example 1
 Consider the following classes:
 ```java
