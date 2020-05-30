@@ -26,7 +26,7 @@ Maven dependency:
   <version>${converter-codegen-version}</version>
 </dependency>
 ```
-##### Example 1
+#### Example 1
 Consider the following classes:
 ```java
 package com.careem.dtos;
@@ -105,7 +105,7 @@ public class ClassAToClassBConverter implements Converter<ClassA, ClassB> {
 
 ```
 
-##### Example 2 (using hard coded value, and imports)
+#### Example 2 (using hard coded value, and imports)
 Consider the following classes:
 ```java
 package com.careem.a;
@@ -177,7 +177,7 @@ public class ClassAToClassBConverter implements Converter<ClassA, ClassB> {
 }
 
 ```
-##### Example 3 (creating multiple converters)
+#### Example 3 (creating multiple converters)
 Consider the following
 ```java
 class ClassA {
@@ -205,7 +205,7 @@ class ClassA{
 }
 ```
 
-##### Example 4 (using interfaceTargetClass)
+#### Example 4 (using interfaceTargetClass)
 Consider the following
 ```java
 @Getter
@@ -248,7 +248,7 @@ class ClassAToClassCConverter implements Converter<ClassA, ClassB> {
 }
 ```
 
-##### Example 5 (when `@Builder` is added on constructor)
+#### Example 5 (when `@Builder` is added on constructor)
 Consider the following
 ```java
 @AllArgsConstructor
@@ -287,7 +287,7 @@ class ClassB extends ClassA {
 }
 ```
 
-##### Example 6 (phantom converter)
+#### Example 6 (phantom converter)
 Consider the following:
 ```java
 abstract class ClassA {
