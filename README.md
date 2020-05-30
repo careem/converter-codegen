@@ -3,31 +3,15 @@
 Generates converters through annotation processing
 
 ## Setup
-
-### 1. OSSRH Maven Repository
-Add following repository to `pom.xml` file:
-```xml
-<repository>
-  <id>ossrh-release</id>
-  <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-</repository>
-```
-If you are interested in snapshots as well, add following repository to `pom.xml` file:
-```xml
-<repository>
-  <id>ossrh-snapshot</id>
-  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-</repository>
-```
-### 2. Add the dependency in your `pom.xml` file:
+Add the following dependency in your `pom.xml` file:
 ```xml
 <dependency>
   <groupId>io.github.careem</groupId>
   <artifactId>converter-annotation-processor</artifactId>
-  <version>${converter-codegen-version}</version>
+  <version>0.6.19</version>
 </dependency>
 ```
-That's it, you are ready to use it
+That's it, you are ready to generator converters!
 
 ## How to use?
 Let's go through examples:
