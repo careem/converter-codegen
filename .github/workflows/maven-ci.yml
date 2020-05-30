@@ -6,8 +6,17 @@ name: Java CI with Maven
 on:
   push:
     branches-ignore: [ master ]
+    paths-ignore: 
+      - '**.md'
+      - '.gitignore'
+      - '.github/workflows/**'
+
   pull_request:
     branches-ignore: [ ]
+    paths-ignore: 
+      - '**.md'
+      - '.gitignore'
+      - '.github/workflows/**'
 
 jobs:
   build:
