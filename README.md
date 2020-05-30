@@ -3,19 +3,23 @@
 Generates converters through annotation processing
 
 ## Setup
-### Converter code generation:
-Maven repository:
+
+### 1. OSSRH Maven Repository
+Add following repository to `pom.xml` file:
 ```xml
-<repository>
-  <id>ossrh-snapshot</id>
-  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-</repository>
 <repository>
   <id>ossrh-release</id>
   <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 </repository>
 ```
-Maven dependency:
+If you are interested in snapshots as well, add following repository to `pom.xml` file:
+```xml
+<repository>
+  <id>ossrh-snapshot</id>
+  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+</repository>
+```
+### 2. Add the dependency in your `pom.xml` file:
 ```xml
 <dependency>
   <groupId>io.github.careem</groupId>
@@ -23,6 +27,8 @@ Maven dependency:
   <version>${converter-codegen-version}</version>
 </dependency>
 ```
+- That's it, you are ready to use it
+
 ## Examples
 ### Example 1
 Consider the following classes:
