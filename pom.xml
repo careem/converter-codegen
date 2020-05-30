@@ -42,7 +42,7 @@
     <scm>
         <connection>scm:git:git://github.com/careem/converter-codegen.git</connection>
         <developerConnection>scm:git:ssh://github.com:careem/converter-codegen.git</developerConnection>
-        <url>http://github.com/careem/converter-codegen</url>
+        <url>http://github.com/careem/converter-codegen/tree/master</url>
     </scm>
 
     <dependencies>
