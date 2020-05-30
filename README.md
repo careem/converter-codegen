@@ -7,6 +7,17 @@ Generates converters through annotation processing
 
 ### How to use
 #### Converter code generation:
+Maven repository:
+```xml
+<repository>
+  <id>ossrh-snapshot</id>
+  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+</repository>
+<repository>
+  <id>ossrh-release</id>
+  <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+</repository>
+```
 Maven dependency:
 ```xml
 <dependency>
