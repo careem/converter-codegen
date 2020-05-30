@@ -32,7 +32,8 @@ public @interface ConverterConfiguration {
 
     /**
      * packages to be scanned to find existing converters
-     * @return String[]
+     *
+     * @return {@link String[]}
      */
     String[] packages() default {};
 
@@ -41,26 +42,36 @@ public @interface ConverterConfiguration {
     @interface Mapping {
         /**
          * Class being converted from
+         *
+         * @return {@link Class}
          */
         Class from();
 
         /**
          * Class being converted to
+         *
+         * @return {@link Class}
          */
         Class to();
 
         /**
          * prefix field use in {@link CircumfixMapping}
+         *
+         * @return {@link String}
          */
         String prefix() default "";
 
         /**
          * suffix field used in {@link CircumfixMapping}
+         *
+         * @return {@link String}
          */
         String suffix() default "";
 
         /**
          * Decides which mapping class to use
+         *
+         * @return {@link Strategy}
          */
         Strategy strategy() default Strategy.CIRCUMFIX;
 

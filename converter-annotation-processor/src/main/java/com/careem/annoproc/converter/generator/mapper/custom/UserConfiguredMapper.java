@@ -24,7 +24,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.careem.annoproc.converter.util.BasicExpressionUtil.methodCall;
 import static com.careem.annoproc.converter.util.Util.asTypeElement;
 
 public class UserConfiguredMapper implements Mapper {

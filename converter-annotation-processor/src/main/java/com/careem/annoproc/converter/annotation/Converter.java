@@ -25,9 +25,18 @@ import java.lang.annotation.Target;
 @Repeatable(Converters.class)
 public @interface Converter {
     /**
-     * preference given to sourceClass when both sourceClass and targetClass are present
+     * This represents the class to convert from (to the class which is annotated)
+     *
+     * @return {@link Class}
      */
     Class sourceClass() default Void.class;
+
+    /**
+     * This represents the class to convert to (from the class which is annotated)
+     * Note: preference given to sourceClass when both sourceClass and targetClass are present
+     *
+     * @return {@link Class}
+     */
     Class targetClass() default Void.class;
 
     /**
@@ -36,40 +45,45 @@ public @interface Converter {
      * use the target class (the class which is being annotated) as the
      * second type argument.
      *
-     * @return Class
+     * @return {@link Class}
      */
     Class interfaceTargetClass() default Void.class;
 
     /**
      * If true then compilation will assume there would be an
      * associated converter generated, but won't actually generate it
-     * @return boolean
+     *
+     * @return {@link boolean}
      */
     boolean assumeExists() default false;
 
     /**
      * If true then unknown mappings are ignored
      * else exception is thrown for unknown mappings
-     * @return boolean
+     *
+     * @return {@link boolean}
      */
     boolean ignoreUnknownMapping() default false;
 
     /**
      * If true then super class members are included for mapping
-     * @return boolean
+     *
+     * @return {@link boolean}
      */
     boolean includeSuper() default false;
 
     /**
      * If true then the convert argument and return type will be annotated with @NonNull
      * else if check will be added to return null
-     * @return boolean
+     *
+     * @return {@link boolean}
      */
     boolean nonNull() default false;
 
     /**
      * Additional imports for generated converter
-     * @return boolean
+     *
+     * @return {@link Import[]}
      */
     Import[] imports() default {};
 

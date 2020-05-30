@@ -4,8 +4,6 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import javax.lang.model.element.Name;
-
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class NamingUtil {
     public static String pascalCase(@NonNull String name) {
