@@ -5,9 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches-ignore: [ master ]
+    branches: [ master, development ]
   pull_request:
-    branches-ignore: [ master ]
+    branches-ignore: [ ]
 
 jobs:
   build:
