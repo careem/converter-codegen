@@ -13,7 +13,6 @@ Maven dependency:
   <groupId>io.github.careem</groupId>
   <artifactId>converter-annotation-processor</artifactId>
   <version>${converter-codegen-version}</version>
-  <scope>compile</scope>
 </dependency>
 ```
 ##### Example 1
