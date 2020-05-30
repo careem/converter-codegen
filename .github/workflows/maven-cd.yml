@@ -6,7 +6,7 @@ name: Java CD with Maven
 
 on:
   push:
-    branches: [ ]
+    branches-ignore: [ '**' ]
     tags: [ 'v0.*' ]
     paths-ignore: 
       - '.gitignore'
