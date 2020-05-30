@@ -14,8 +14,9 @@ on:
   pull_request:
     branches-ignore: [ ]
     paths-ignore: 
-      - '**.md'
       - '.gitignore'
+      - 'LICENSE'
+      - '**.md'
       - '.github/workflows/**'
 
 jobs:
