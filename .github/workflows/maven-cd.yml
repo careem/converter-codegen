@@ -6,12 +6,13 @@ name: Java CD with Maven
 
 on:
   push:
-    branches: [ master ]
+    branches: [ ]
+    tags: [ 'v0.*' ]
     paths-ignore: 
       - '.gitignore'
-      - 'LICENSE'
+      - '/LICENSE'
       - '**.md'
-      - '.github/workflows/**'
+      - '/.github/workflows/**'
 
 jobs:
   build:
