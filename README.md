@@ -2,7 +2,7 @@
 
 Generates converters through annotation processing
 
-# Setup
+## Setup
 ### Converter code generation:
 Maven repository:
 ```xml
@@ -23,7 +23,7 @@ Maven dependency:
   <version>${converter-codegen-version}</version>
 </dependency>
 ```
-# Examples
+## Examples
 ### Example 1
 Consider the following classes:
 ```java
