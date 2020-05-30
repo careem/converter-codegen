@@ -31,12 +31,12 @@
     </licenses>
 
     <developers>
-        <!--<developer>-->
-            <!--<name></name>-->
-            <!--<email></email>-->
-            <!--<organization></organization>-->
-            <!--<organizationUrl></organizationUrl>-->
-        <!--</developer>-->
+        <developer>
+            <name>Aneel Kumar</name>
+            <email>aneel.kumar@careem.com</email>
+            <organization>Careem</organization>
+            <organizationUrl>https://www.careem.com/</organizationUrl>
+        </developer>
     </developers>
 
     <scm>
