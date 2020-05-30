@@ -40,6 +40,7 @@
     </developers>
 
     <scm>
+        <tag>careem</tag>
         <connection>scm:git:git://github.com/careem/converter-codegen.git</connection>
         <developerConnection>scm:git:ssh://github.com:careem/converter-codegen.git</developerConnection>
         <url>http://github.com/careem/converter-codegen/tree/master</url>
