@@ -27,38 +27,54 @@ import java.lang.annotation.Target;
 })
 @Repeatable(ConverterMappings.class)
 public @interface ConverterMapping {
+    /**
+     * This represents the class to convert from (to the class which is annotated)
+     *
+     * @return {@link Class}
+     */
     Class sourceClass() default Void.class;
+
+    /**
+     * This represents the class to convert to (from the class which is annotated)
+     *
+     * @return {@link Class}
+     */
     Class targetClass() default Void.class;
 
     /**
      * If value is not empty then use the value as-it-is as expression
-     * @return String
+     *
+     * @return {@link String}
      */
     String value() default "";
 
     /**
      * If value is empty, but field is not empty then use field name
      * for generating {@link ConversionMappingResult} expression
-     * @return String
+     *
+     * @return {@link String}
      */
     String field() default "";
 
     /**
      * If value and field are empty, but method is not empty then use method
      * for generating {@link ConversionMappingResult} expression
-     * @return String
+     *
+     * @return {@link String}
      */
     String method() default "";
 
     /**
      * Use check for null before converting and/or setting value of the target field
-     * @return boolean
+     *
+     * @return {@link boolean}
      */
     boolean nullCheck() default false;
 
     /**
      * If skip is true, then field is mapping is not added in the converter
-     * @return boolean
+     *
+     * @return {@link boolean}
      */
     boolean skip() default false;
 }
