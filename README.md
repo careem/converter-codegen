@@ -276,7 +276,7 @@ class ClassB extends ClassA {
 }
 ```
 
-### Example 6 (phantom converter)
+### Example 6 (assumed converter)
 Consider the following:
 ```java
 abstract class ClassA {
@@ -317,9 +317,9 @@ class ClassD {
     ClassB classB; // this will have only derived class objects
 }
 ```
-the above will fail the compilation because converter annotation processor won't be able to find `ClassA` to `ClassB` converter, but we already have a converter to convert from `ClassAX` to `ClassBX`. To generate `ClassC` to `ClassD` converter, we will need to make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter. Which can be achieved by `phantom` field as follows:
+the above will fail the compilation because converter annotation processor won't be able to find `ClassA` to `ClassB` converter, but we already have a converter to convert from `ClassAX` to `ClassBX`. To generate `ClassC` to `ClassD` converter, we will need to make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter. Which can be achieved by `assumed` field as follows:
 ```java
-@Converter(sourceClass = ClassA.class, phantom = true)
+@Converter(sourceClass = ClassA.class, assumed = true)
 class ClassB {
     //...
 }
