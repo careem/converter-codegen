@@ -172,6 +172,7 @@
             </modules>
         </profile>
     </profiles>
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
