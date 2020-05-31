@@ -11,7 +11,7 @@ Add the following dependency in your `pom.xml` file:
   <version>0.6.19</version>
 </dependency>
 ```
-That's it, you are ready to generator converters!
+That's it, you are ready to generate converters!
 
 ## How to use?
 Let's go through examples:
