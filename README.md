@@ -1,6 +1,5 @@
 ![version](https://img.shields.io/badge/version-0.6.19-blue)
-![Java CD with Maven](https://github.com/careem/converter-codegen/workflows/Java%20CD%20with%20Maven/badge.svg)
-![Java CI with Maven](https://github.com/careem/converter-codegen/workflows/Java%20CI%20with%20Maven/badge.svg)
+![ci](https://github.com/careem/converter-codegen/workflows/ci/badge.svg?branch=0.6.x)
 
 Generates converters through annotation processing
 
