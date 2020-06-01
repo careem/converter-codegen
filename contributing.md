@@ -14,7 +14,7 @@
 
 ## Pull Request
 
-- Make push to your master branch
-- Make pull request with original repository's master branch
+- push to your master branch
+- make pull request with original repository's master branch
 
 Thanks for contributing! 💚
