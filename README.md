@@ -1,29 +1,21 @@
-![Java CD with Maven](https://github.com/careem/converter-codegen/workflows/Java%20CD%20with%20Maven/badge.svg)
+![version](https://img.shields.io/badge/version-0.6.19-blue)
+![ci](https://github.com/careem/converter-codegen/workflows/ci/badge.svg?branch=0.6.x)
 
 Generates converters through annotation processing
 
 ## Setup
-### Converter code generation:
-Maven repository:
-```xml
-<repository>
-  <id>ossrh-snapshot</id>
-  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-</repository>
-<repository>
-  <id>ossrh-release</id>
-  <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-</repository>
-```
-Maven dependency:
+Add the following dependency in your `pom.xml` file:
 ```xml
 <dependency>
   <groupId>io.github.careem</groupId>
   <artifactId>converter-annotation-processor</artifactId>
-  <version>${converter-codegen-version}</version>
+  <version>0.6.19</version>
 </dependency>
 ```
-## Examples
+That's it, you are ready to generate converters!
+
+## How to use?
+Let's go through examples:
 ### Example 1
 Consider the following classes:
 ```java
@@ -285,7 +277,7 @@ class ClassB extends ClassA {
 }
 ```
 
-### Example 6 (phantom converter)
+### Example 6 (assumed converter)
 Consider the following:
 ```java
 abstract class ClassA {
@@ -326,9 +318,9 @@ class ClassD {
     ClassB classB; // this will have only derived class objects
 }
 ```
-the above will fail the compilation because converter annotation processor won't be able to find `ClassA` to `ClassB` converter, but we already have a converter to convert from `ClassAX` to `ClassBX`. To generate `ClassC` to `ClassD` converter, we will need to make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter. Which can be achieved by `phantom` field as follows:
+the above will fail the compilation because converter annotation processor won't be able to find `ClassA` to `ClassB` converter, but we already have a converter to convert from `ClassAX` to `ClassBX`. To generate `ClassC` to `ClassD` converter, we will need to make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter. Which can be achieved by `assumed` field as follows:
 ```java
-@Converter(sourceClass = ClassA.class, phantom = true)
+@Converter(sourceClass = ClassA.class, assumed = true)
 class ClassB {
     //...
 }
