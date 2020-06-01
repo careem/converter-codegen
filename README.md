@@ -1,7 +1,9 @@
-![version](https://img.shields.io/badge/version-0.6.19-orange)
-![ci](https://github.com/careem/converter-codegen/workflows/ci/badge.svg?branch=0.6.x)
+# converter-annotation-processor
 
-Generates converters through annotation processing
+![ci](https://github.com/careem/converter-codegen/workflows/ci/badge.svg?branch=0.6.x)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.careem/converter-annotation-processor.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.github.careem/converter-annotation-processor)
+
+> Generates converters through annotation processing
 
 ## Setup
 Add the following dependency in your `pom.xml` file:
