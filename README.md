@@ -6,7 +6,7 @@
 [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=converter-codegen&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=converter-codegen)
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=converter-codegen&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=converter-codegen)
 
-> Generates converters through annotation processing
+> Generate converters through annotation processing
 
 ![screenshots](https://raw.githubusercontent.com/careem/converter-codegen/gh-pages/img/screenshots.gif)
 
