@@ -22,4 +22,7 @@ That's it, you are ready to generate converters!
 ## How to use?
 ![screenshots](https://raw.githubusercontent.com/careem/converter-codegen/gh-pages/img/screenshots.gif)
 
-Let's go through [examples](./examples).
+Let's go through [examples](https://careem.github.io/converter-codegen/examples).
+
+## Contributing
+Please visit [contributing](https://careem.github.io/converter-codegen/contributing).

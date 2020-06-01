@@ -1,6 +1,4 @@
-# converter-annotation-processor
-
-## Examples
+# Examples
 
 Let's go through examples:
 
