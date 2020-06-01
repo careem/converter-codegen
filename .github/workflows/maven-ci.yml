@@ -11,7 +11,7 @@ on:
     paths-ignore: 
       - '**.md'
       - '.gitignore'
-      - '.github/workflows/**'
+      - '.github/workflows/maven-cd.yml'
 
   pull_request:
     branches-ignore: [ ]
