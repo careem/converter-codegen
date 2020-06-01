@@ -1,0 +1,6 @@
+.idea
+.DS_Store
+converter-annotation-processor
+converter-codegen-testapp
+*.iml
+src
