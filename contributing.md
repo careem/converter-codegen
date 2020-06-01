@@ -17,4 +17,4 @@
 - Make push to your master branch
 - Make pull request with original repository's master branch
 
-Thanks for contributing!
+Thanks for contributing! 💚
