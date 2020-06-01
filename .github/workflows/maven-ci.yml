@@ -41,6 +41,7 @@ jobs:
         SONAR_PROJECT_KEY: 'converter-codegen'
         SONAR_ORGANIZATION: 'careem'
         SONAR_HOST_URL: 'https://sonarcloud.io'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 #     - name: SonarCloud Scan
 #       uses: sonarsource/sonarcloud-github-action@master
