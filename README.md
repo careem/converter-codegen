@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-0.6.19-blue)
+![version](https://img.shields.io/badge/version-0.6.19-orange)
 ![ci](https://github.com/careem/converter-codegen/workflows/ci/badge.svg?branch=0.6.x)
 
 Generates converters through annotation processing
