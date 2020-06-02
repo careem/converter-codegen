@@ -1,6 +1,13 @@
-# Examples
+# Usage
 
-Let's go through examples:
+To create a converter to convert `ClassA` object to `ClassB` object:
+- add `@Converter(sourceClass = ClassA.class)` annotation on `ClassB` 
+- `mvn clean install ...`
+- `ClassAToClassBConverter` gets auto-generated!
+
+To learn more about the usage, let's go through examples:
+
+## Examples
 
 ### Example 1
 Consider the following classes:
