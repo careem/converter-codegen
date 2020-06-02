@@ -311,11 +311,17 @@ class ClassD {
     ClassB classB; // this will have only derived class objects
 }
 ```
-the above will fail the compilation because converter annotation processor won't be able to find `ClassA` to `ClassB` converter, but we already have a converter to convert from `ClassAX` to `ClassBX`. To generate `ClassC` to `ClassD` converter, we will need to make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter. Which can be achieved by `assumed` field as follows:
+It will not be able to generate `ClassC` to `ClassD` converter, and will fail the compilation, because converter annotation processor won't be able to find `ClassA` to `ClassB` converter as there's no converter with `Converter<ClassA, ClassB>` implementation. 
+
+But we know that:
+- `ClassA` and `ClassB` are abstract classes
+- we have converter to converter from `ClassAX` to `ClassBX` which is implemented as `Converter<ClassAX, ClassB>`
+
+then we can make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter by adding `assumedExists` flag for `ClassB` as follows:
 ```java
 @Converter(sourceClass = ClassA.class, assumeExists = true)
 class ClassB {
     //...
 }
 ```
-the above will not generate a converter but would allow continuing the annotation processing.
+It will not generate a `ClassA` to `ClassB` converter but will allow continuing the annotation processing for generating `ClassC` to `ClassD` converter.
