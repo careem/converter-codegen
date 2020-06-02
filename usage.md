@@ -313,7 +313,7 @@ class ClassD {
 ```
 the above will fail the compilation because converter annotation processor won't be able to find `ClassA` to `ClassB` converter, but we already have a converter to convert from `ClassAX` to `ClassBX`. To generate `ClassC` to `ClassD` converter, we will need to make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter. Which can be achieved by `assumed` field as follows:
 ```java
-@Converter(sourceClass = ClassA.class, assumed = true)
+@Converter(sourceClass = ClassA.class, assumeExists = true)
 class ClassB {
     //...
 }
