@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: ci
+name: maven-ci
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
     paths-ignore: 
       - '**.md'
       - '.gitignore'
-      - '.github/workflows/**'
+      - '.github/workflows/maven-cd.yml'
 
   pull_request:
     branches-ignore: [ ]
@@ -35,11 +35,18 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B clean install -Dmaven.gpg.skip=true org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_LOGIN -Dsonar.organization=$SONAR_ORGANIZATION -Dsonar.projectKey=$SONAR_PROJECT_KEY
+      env:
+        SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
+        SONAR_PROJECT_KEY: 'converter-codegen'
+        SONAR_ORGANIZATION: 'careem'
+        SONAR_HOST_URL: 'https://sonarcloud.io'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 #     - name: SonarCloud Scan
 #       uses: sonarsource/sonarcloud-github-action@master
 #       with:
-#         java-version: 1.8
+#         projectBaseDir: .
 #       env:
 #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
