@@ -21,9 +21,9 @@ Add the following dependency in your `pom.xml` file:
 ```
 That's it, you are ready to generate converters!
 
-## How to use?
+## Usage?
 
-Let's go through [examples](https://careem.github.io/converter-codegen/examples).
+Please visit [usage](https://careem.github.io/converter-codegen/usage).
 
 ## Contributing
 Please visit [contributing](https://careem.github.io/converter-codegen/contributing).
