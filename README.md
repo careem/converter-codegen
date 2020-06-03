@@ -8,6 +8,7 @@
 ![screenshots](https://raw.githubusercontent.com/careem/converter-codegen/gh-pages/img/screenshots.gif)
 
 ## Setup
+
 Add the following dependency in your `pom.xml` file:
 ```xml
 <dependency>
@@ -20,7 +21,13 @@ That's it, you are ready to generate converters!
 
 ## Usage
 
-Please visit [usage](https://careem.github.io/converter-codegen/usage).
+To create a converter to convert `ClassA` object to `ClassB` object:
+- add `@Converter(sourceClass = ClassA.class)` annotation on `ClassB` 
+- `mvn clean install ...`
+- `ClassAToClassBConverter` gets auto-generated!
+
+Please visit [usage](https://careem.github.io/converter-codegen/usage) for more.
 
 ## Contributing
+
 Please visit [contributing](https://careem.github.io/converter-codegen/contributing).
