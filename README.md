@@ -21,7 +21,7 @@ That's it, you are ready to generate converters!
 
 ## Usage
 
-To create a converter to convert `ClassA` object to `ClassB` object:
+To generate a `ClassA` object to `ClassB` object converter:
 - add `@Converter(sourceClass = ClassA.class)` annotation on `ClassB` 
 - `mvn clean install ...`
 - `ClassAToClassBConverter` gets auto-generated!
