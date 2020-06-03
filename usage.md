@@ -317,7 +317,7 @@ But we know that:
 - `ClassA` and `ClassB` are abstract classes
 - we have converter to converter from `ClassAX` to `ClassBX` which is implemented as `Converter<ClassAX, ClassB>`
 
-then we can make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter by adding `assumedExists` flag for `ClassB` as follows:
+then we can make the converter annotation processor assume that there already exists a `ClassA` to `ClassB` converter by adding `assumeExists` flag for `ClassB` as follows:
 ```java
 @Converter(sourceClass = ClassA.class, assumeExists = true)
 class ClassB {
