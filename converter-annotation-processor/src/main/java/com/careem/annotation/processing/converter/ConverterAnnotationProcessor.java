@@ -27,7 +27,7 @@ import java.util.logging.Logger;
     "com.careem.annotation.processing.converter.annotation.Converter",
     "com.careem.annotation.processing.converter.annotation.Converters"
 })
-@SupportedSourceVersion(SourceVersion.RELEASE_8)
+@SupportedSourceVersion(SourceVersion.RELEASE_11)
 public class ConverterAnnotationProcessor extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
