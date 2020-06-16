@@ -5,7 +5,7 @@
     <parent>
         <artifactId>converter-codegen</artifactId>
         <groupId>io.github.careem</groupId>
-        <version>0.6.21-SNAPSHOT</version>
+        <version>0.7.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -40,7 +40,19 @@
             <groupId>io.github.careem</groupId>
             <artifactId>converter-annotation-processor</artifactId>
             <version>${project.parent.version}</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

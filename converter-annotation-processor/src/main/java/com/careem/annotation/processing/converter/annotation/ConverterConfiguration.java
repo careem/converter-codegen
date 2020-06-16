@@ -33,7 +33,7 @@ public @interface ConverterConfiguration {
     /**
      * packages to be scanned to find existing converters
      *
-     * @return {@link String[]}
+     * @return {@link String}[]
      */
     String[] packages() default {};
 

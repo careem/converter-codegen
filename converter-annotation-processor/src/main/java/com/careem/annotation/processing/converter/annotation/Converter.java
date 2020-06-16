@@ -83,7 +83,7 @@ public @interface Converter {
     /**
      * Additional imports for generated converter
      *
-     * @return {@link Import[]}
+     * @return {@link Import}[]
      */
     Import[] imports() default {};
 

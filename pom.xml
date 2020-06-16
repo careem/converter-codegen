@@ -7,14 +7,15 @@
     <groupId>io.github.careem</groupId>
     <artifactId>converter-codegen</artifactId>
     <packaging>pom</packaging>
-    <version>0.6.21-SNAPSHOT</version>
+    <version>0.7.0-SNAPSHOT</version>
     <modules>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java-version>1.8</java-version>
+        <java-version>11</java-version>
         <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+        <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
         <auto-service.version>1.0-rc2</auto-service.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven.gpg.skip>false</maven.gpg.skip>
@@ -113,7 +114,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>${maven-javadoc-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
