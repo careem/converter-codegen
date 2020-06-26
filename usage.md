@@ -58,7 +58,6 @@ Compiling the code will generate
 ```java
 package com.careem.a;
 
-import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
@@ -74,7 +73,6 @@ public class ClassAToClassBConverter implements Converter<ClassA, ClassB> {
         this.gson = gson;
     }
 
-    @NonNull
     @Override
     public ClassB convert( ClassA from) {
         return ClassB.builder()
@@ -131,7 +129,6 @@ Compiling the code will generate
 ```java
 package com.careem.a;
 
-import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
@@ -147,7 +144,6 @@ public class ClassAToClassBConverter implements Converter<ClassA, ClassB> {
         this.gson = gson;
     }
 
-    @NonNull
     @Override
     public ClassB convert( ClassA from) {
         return ClassB.builder()
@@ -208,7 +204,7 @@ class ClassC extends ClassB {
 then compiling will generate following converter
 ```java
 class ClassAToClassCConverter implements Converter<ClassA, ClassC> {
-    @NonNull ClassC convert(ClassA from) {
+    public ClassC convert(ClassA from) {
         return ClassC.builder()
             .build();
     }
@@ -224,7 +220,7 @@ class ClassC extends ClassB {
 then compiling will generate following conveter
 ```java
 class ClassAToClassCConverter implements Converter<ClassA, ClassB> {
-    @NonNull ClassB convert(ClassA from) {
+    public ClassB convert(ClassA from) {
         return ClassC.builder()
             .build();
     }
