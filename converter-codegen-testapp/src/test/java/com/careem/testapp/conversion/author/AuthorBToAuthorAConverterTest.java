@@ -7,12 +7,12 @@ import com.careem.testapp.conversion.author.c.AuthorC;
 import com.careem.testapp.conversion.book.a.BookA;
 import com.careem.testapp.conversion.book.b.BookB;
 import com.google.gson.Gson;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.core.convert.ConversionService;
 
 import java.util.Arrays;
@@ -25,8 +25,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.mockito.Mockito.doReturn;
-
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class AuthorBToAuthorAConverterTest {
     @Mock
     private ConversionService conversionService;
@@ -46,7 +45,7 @@ public class AuthorBToAuthorAConverterTest {
 
         final AuthorA actual = converter.convert(authorB);
 
-        Assert.assertEquals(expected, actual);
+        Assertions.assertThat(actual).isEqualTo(expected);
     }
 
     private AuthorA convert(AuthorB from) {
