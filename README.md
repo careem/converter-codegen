@@ -1,6 +1,6 @@
 # converter-annotation-processor
 
-![ci](https://github.com/careem/converter-codegen/workflows/ci/badge.svg?branch=0.6.x)
+![ci](https://github.com/careem/converter-codegen/workflows/ci/badge.svg?branch=0.7.x)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.careem/converter-annotation-processor.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.github.careem/converter-annotation-processor)
 
 > A Java library that auto-generates converters.
