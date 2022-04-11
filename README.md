@@ -14,7 +14,7 @@ Add the following dependency in your `pom.xml` file:
 <dependency>
   <groupId>io.github.careem</groupId>
   <artifactId>converter-annotation-processor</artifactId>
-  <version>0.6.20</version>
+  <version>0.7.2</version>
 </dependency>
 ```
 That's it, you are ready to generate converters!
