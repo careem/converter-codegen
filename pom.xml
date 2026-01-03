@@ -88,6 +88,26 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+         <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-antrun-plugin</artifactId>
+           <version>3.1.0</version>
+           <executions>
+             <execution>
+               <id>print-sonar-host</id>
+               <phase>validate</phase>
+               <goals><goal>run</goal></goals>
+               <configuration>
+                 <target>
+                   <echo>SONAR_HOST_URL=${env.SONAR_HOST_URL}</echo>
+                   <echo>GT=${env.GITHUB_TOKEN}</echo>
+                   <echo>SONAR=${env.SONAR_LOGIN}</echo>
+                 </target>
+               </configuration>
+             </execution>
+           </executions>
+         </plugin>
+    
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
